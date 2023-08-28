@@ -1,0 +1,387 @@
+module 1:
+------------------------------------------------------------------------------------------------------------------------------------------
+
+(1) What is software? What is software engineering?
+
+ans: software:-set of programs contaning instruction  that provide proper funcnality.
+
+	software enginering:-a process of building something that servers  a purticular purpose snd solve the problems.
+
+
+(2)Explain types of software:-
+ans: ther are two types of software:
+1)System software
+2)application software
+
+
+1)System Software:-This software program  are designed to  run computer's   application programs and hardware.System software is cordinates activities and function of hardware and software.
+
+2)Application Software:-These are programs designed to perform specific tasks for users. Examples include web browsers, word processors, photo editors, and video players.
+
+
+(3)What is SDLC? Explain each phase of SDLC
+
+ans:Software Development Life Cycle, is a systematic process used by software developers and project managers to plan, design, create, test, deploy, and maintain software applications or systems
+ ->phases of sdlc:
+
+1)Requirement Analysis: In this phase, the project team works closely with stakeholders to gather and understand the requirements of the software. 
+
+2)System Design: Based on the gathered requirements, the system design phase involves creating a blueprint for the software solution.
+
+3)Implementation: During this phase, developers write code according to the design specifications. The implementation phase involves actual programming, where the software is created based on the design.
+
+4)Testing: In this phase, the developed software is rigorously tested to identify defects and ensure that it functions as intended. Different testing techniques are used, such as unit testing (testing individual components), integration testing (testing interactions between components), and system testing (testing the entire software system).
+
+5)Deployment: Once the software has been thoroughly tested and deemed ready for release, it is deployed to the production environment. This involves installing the software on servers, configuring it for real-world usage, and making it available to end-users. Deployment might also include data migration and user training.
+
+6)Maintenance and Support: After deployment, the software enters its maintenance phase. This involves monitoring the software's performance, addressing any bugs or issues that arise, and making updates or enhancements based on user feedback and changing requirements.
+
+
+(4)What is DFD? Create a DFD diagram on Flipkart.
+ans:DFD stands for Data Flow Diagram. It's a visual representation of how data flows through a system, showing the processes, data sources, data destinations, and the various transformations that take place as data moves through the system.
+
+                          +------------+
+            |   Website  |          +--------------+
+            | (Flipkart) |<---------|   Customer   |
+            +-----+------+          +--------------+
+                  |
+                  |   +-----------+
+                  +-->|   Catalog |
+                  |   +-----------+
+                  |
+                  |   +----------+
+                  +-->|   Cart   |
+                  |   +----------+
+                  |
+                  |   +------------+
+                  +-->|  Checkout  |
+                      +------------+
+
+
+(5)What is Flow chart? Create a flowchart to make addition of two numbers
+ans:A flowchart is a graphical representation of a process, algorithm, or system that uses various symbols to depict different steps, decisions, inputs, and outputs. It is commonly used to visualize the flow of logic or steps in a clear and organized manner.
+
+Start --> Input Num1 --> Input Num2 --> Add Num1 and Num2 --> Display Result --> End
+
+Start/End: Represents the beginning and end of the flowchart.
+Input: Represents the step where the user inputs data.
+Process: Represents a computation or operation.
+Display: Represents output to the user.
+
+(6)What is Use case Diagram? Create a use-case on bill payment on paytm
+ans:
+A Use Case Diagram is a graphical representation of the interactions between actors (users or external systems) and a system, showing how various use cases (specific tasks or interactions) are performed by the system. It helps to visualize the functional requirements of a system and the relationships between different elements.
+
+                    +-------------------+
+                    |      User         |
+                    +-------------------+
+                          |
+                          | 1. Initiates Bill Payment
+                          v
+               +-------------------------------+
+               |          Bill Payment         |
+               +-------------------------------+
+               | - Select Biller               |
+               | - Enter Bill Details          |
+               | - Choose Payment Method       |
+               | - Confirm Payment             |
+               +-------------------------------+
+                          |
+                          | 2. Completes Payment
+                          v
+               +-------------------------------+
+               |          Payment Gateway      |
+               +-------------------------------+
+               | - Process Payment Transaction |
+               | - Notify Payment Status       |
+               +-------------------------------+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+        MODULE: 2.1 (C Language Fundamental):
+
+Q-1) Display This Information using printf
+1. Your Name
+2. Your Birth date
+3. Your Age
+4. Your Address
+
+#include<stdio.h>
+main()
+{
+	printf(" Name : Dev Kayastha");
+	printf("\n BirthDate: 21/11/2001");
+	printf("\n Age: 22");
+	printf("\n Address: Ahemedabad");
+	
+}
+
+Q-2)Write a program to make Simple calculator (to make addition, subtraction,
+multiplication, division and modulo)
+
+#include<stdio.h>
+main()
+{
+	int a=20,b=10;
+	printf(" sum of two number is %d",a+b);
+	printf("\n subtraction of two number is %d",a-b);
+	printf("\n multiplication of two number is %d",a*b);
+	printf("\n division of two number is %d ",a/b);
+	printf("\n modulo of two number is %d ",a%b);
+	
+	
+}
+
+Q-3)WAP to find area of circle, rectangle and triangle
+
+#include<stdio.h>
+main()
+{
+	float radius,area;
+	float pi=3.14;
+	printf("Enter the radius:-");
+	scanf("%f",&radius);
+	area=pi*radius*radius;
+	printf("Area of Circle is %f",area);	
+}
+
+#include<stdio.h>
+main()
+{
+	float base,height;
+	float area;
+	printf("Enter the base:-");
+	scanf("%f",&base);
+	printf("Enter the height:-");
+	scanf("%f",&height);
+	area=(base*height)/2;
+	printf("Area of Triangle is %0.2f",area);
+			
+}
+
+#include<stdio.h>
+main()
+{
+	float len,breadth,area;
+	
+	printf("Enter a length:");
+	scanf("%f",&len);
+	printf("\nEnter a breadth:");
+	scanf("%f",&breadth);
+	area=(float)len*breadth;
+	printf("\nArea of Rectangle is %f",area);
+	
+	
+}
+
+Q-4)WAP to find simple interest:-
+
+#include<stdio.h>
+main()
+{
+int p,r,n,i;
+printf("Enter the principal:");
+scanf("%d",&p);
+printf("Enter the rate:");
+scanf("%d",&r);
+printf("Enter the time:");
+scanf("%d",&n);
+i=p*r*n/100;
+printf("the simple intrest is %d",i);			
+}
+
+Q-5)WAP to check if the given year is a leap year or not:-
+
+#include<stdio.h>
+main()
+{
+	int y;
+	printf("Enter  a year:");
+	scanf("%d",&y);
+	if(y%400==0)
+	{
+		printf("this is a leap year");
+	}
+	else if(y%100==0)
+	{
+		printf("this is not a leap year");
+	}
+	else if(y%4==0)
+	{
+		printf("this is a leap year");
+	}
+	else
+	{
+		printf("this is not  a leap year");
+	}
+ }
+
+Q-6)WAP to convert years into days and days into years
+
+#include<stdio.h>
+main()
+{
+	int days, years, weeks;
+
+    days = 1329; 
+
+    years = days/365; 
+    weeks = (days % 365)/7;
+    days = days- ((years*365) + (weeks*7));
+
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+
+                                       
+                                     MODULE: 2.2 (C Language Programing with C)
+
+Q-1)WAP to make simple calculator (operation include Addition, Subtraction,
+Multiplication, Division, modulo):-
+
+#include<stdio.h>
+main()
+{
+	 char opt;  
+    int n1, n2;   
+    float res;  
+    printf (" Select an operator (+, -, *, /): \n ");  
+    scanf ("%c", &opt);   
+    printf (" Enter the first number: ");  
+    scanf(" %d", &n1);   
+    printf (" Enter the second number: ");  
+    scanf (" %d", &n2);   
+      
+    if (opt == '+')  
+    {  
+        res = n1 + n2;  
+        printf (" Addition of %d and %d is: %f", n1, n2, res);  
+    }  
+      
+    else if (opt == '-')  
+    {  
+        res = n1 - n2;  
+        printf (" Subtraction of %d and %d is: %f", n1, n2, res);  
+    }  
+      
+    else if (opt == '*')  
+    {  
+        res = n1 * n2;   
+        printf (" Multiplication of %d and %d is: %f", n1, n2, res);  
+    }  
+      
+    else if (opt == '/')  
+    {  
+        if (n2 == 0)    
+        {  
+            printf (" \n Divisor cannot be zero. Please enter another value ");  
+            scanf ("%d", &n2);        
+        }  
+        res = n1 / n2;  
+        printf (" Division of %d and %d is: %.2f", n1, n2, res);  
+    }  
+    else  
+    {  
+        printf(" \n You have entered wrong inputs ");  
+    }  
+}
+
+Q-2)WAP to swap two numbers without using third variable:-
+
+#include<stdio.h>  
+main()
+{
+int a=10, b=20;
+printf("Before swap a=%d b=%d",a,b);      
+a=a+b;
+b=a-b;
+a=a-b;
+printf("\nAfter swap a=%d b=%d",a,b);    
+
+}
+
+Q-3)WAP to find number is even or odd using ternary operator:-
+#include<stdio.h>
+main()
+{
+	int num;
+	printf("Enter a num:");
+	scanf("%d",&num);
+	if(num%2==0)
+	{
+		printf("even num");
+	}
+	else
+	{
+		printf("odd num");
+	}
+	
+}
+Q-4)WAP to show
+1. Monday to Sunday using switch case
+2. Vowel or Consonant using switch case
+
+1.#include<stdio.h>
+main()
+{
+	int day;
+	printf("Enter the day:");
+	scanf("%d",&day);
+	switch(day)
+	{
+		case 1:
+			printf("Monday");
+			break;
+		case 2:
+			printf("Tuesday");
+			break;
+		case 3:
+			printf("wednesday");
+			break;
+		case 4:
+			printf("thurshday");
+			break;
+		case 5:
+			printf("Friday");
+			break;
+		case 6:
+			printf("Saturday");
+			break;
+		case 7:
+			printf("Sunday");
+			break;
+		default:
+			printf("Invalid input");
+	}
+}
+2.#include<stdio.h>
+main()
+{
+	char ch;
+	printf("Enter an alphabet:");
+	scanf("%c",&ch);
+	switch(ch)
+	{
+		case 'a':
+			printf("Vowel");
+			break;
+		case 'e':
+			printf("vowel");
+			break;
+		case 'i':
+			printf("vowel");
+			break;
+		case 'o':
+			printf("vowel");
+			break;
+		case 'u':
+			printf("vowel");
+			break;
+		default:
+			printf("constant");
+	}
+}
