@@ -1,0 +1,660 @@
+1.
+
+
+//loop//
+//1. WAP to print 972 to 897 using for loop
+
+#include<stdio.h>
+main()
+{
+	int i;
+	
+	for(i=972;i>=897;--i)
+	{
+		printf("%d\n",i);
+	}
+}
+
+
+2.
+// loop Q-2
+
+
+#include <stdio.h>
+
+main()
+{
+int n, sum = 0, c, value;
+
+printf("How many numbers you want to add?\n");
+scanf("%d", &n);
+
+printf("Enter %d integers\n", n);
+
+for (c = 1; c <= n; c++)
+{
+scanf("%d", &value);
+sum = sum + value;
+}
+
+printf("Sum of the integers = %d\n", sum);
+}
+
+3.
+//Q-3 even num
+
+#include<stdio.h>
+main()
+{
+	int i,n;
+	printf("Enter a Number:");
+	scanf("%d",&n);
+	for(i=0;i<=n;i++)
+	{
+		if(i%2==0)
+		{
+			printf("\n  %d",i);
+		}
+	}
+}
+
+4.
+
+//Q-4 odd num
+#include<stdio.h>
+main()
+{
+	int i,n;
+	printf("Enter a Number:");
+	scanf("%d",&n);
+	for(i=0;i<=n;i++)
+	{
+		if(i%2!=0)
+		{
+			printf("\n  %d",i);
+		}
+	}
+}
+
+
+5.
+
+
+//Q-5 sum of even num
+#include <stdio.h>
+
+main()
+{
+    int i, n, sum=0;
+
+    
+    printf("Enter num: ");
+    scanf("%d", &n);
+
+    for(i=2; i<=n; i+=2)
+    {
+        
+        sum += i;
+    }
+
+    printf("Sum of all even number between 1 to %d = %d", n, sum);
+}
+
+6.
+//Q-6 odd num sum and table
+#include <stdio.h>
+
+int main() {
+    int n,i,sum=0,j;
+    
+   
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+  
+    printf("Number\tSum of Odd Numbers\n");
+    printf("--------------------------------\n");
+    
+    for (i = 1; i <= n; i++) {
+        
+        
+        
+        for (j = 1; j <= i; j++) {
+            if (j % 2 != 0) {
+                sum += j;
+            }
+        }
+       
+        printf("%d\t%d\n", i, sum);
+    }
+    
+    return 0;
+}
+7.
+
+//Q-7 factorial
+#include <stdio.h>
+main(){
+  int i,f=1,num;
+
+  printf("Enter the number : ");
+  scanf("%d",&num);
+
+  for(i=1;i<=num;i++)
+      f=f*i;
+
+  printf("The Factorial of %d is: %d\n",num,f);
+}
+
+
+8..
+//Q-8 fibonachi
+#include<stdio.h>    
+int main()    
+{    
+ int n1=0,n2=1,n3,i,n;    
+ printf("Enter the number of elements:");    
+ scanf("%d",&n);    
+ printf("\n%d %d",n1,n2);   
+ for(i=2;i<n;++i)    
+ {    
+  n3=n1+n2;    
+  printf(" %d",n3);    
+  n1=n2;    
+  n2=n3;    
+ }    
+ }  
+
+9.  
+//Q-9 reverse
+
+// C Program to Reverse an Array
+#include <stdio.h>
+
+ main() {
+    int arr[10];
+
+    int n,i;
+    
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    
+    printf("Enter an array: ");
+    for (i = 0; i< n; i++){
+        scanf("%d", &arr[i]);
+    }
+    
+    printf("Reversed array: ");
+    for (i = n-1; i>=0; i--){
+        printf("%d ", arr[i]);
+    }
+ 
+}
+
+
+10.
+#include<stdio.h>
+main()
+{
+      int a[5],i,max=0,min=0;
+      
+      printf("Enter Five Value :");
+      for(i=0;i<=4;i++)
+          {
+               scanf("%d",&a[i]);
+          }
+      for(i=0;i<=4;i++)
+          {
+              if(a[i]>max)
+               {
+                    max=a[i]; 
+                   
+               }
+              else
+               {
+                    min=a[i];
+                   
+               }
+                   
+           }
+                    printf("Minium is : %d\n",min);
+                    printf("Maximum is : %d\n",max);
+                    
+} 
+
+11.
+//Q-11 patttern 1
+#include<stdio.h>
+main()
+{
+    int i, j, n;
+    printf("Enter number of lines of pattern: ");
+    scanf("%d", &n);
+
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d", j%2);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+12..
+//Q-12-pattern 2
+
+#include <stdio.h>
+int main()
+{
+    int i,j,n;
+    char ch='A';
+    printf("Enter num:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%c ",ch++);
+        }
+        printf("\n");
+    }
+}
+13.
+//Q-13 pattern 3
+
+#include <stdio.h>  
+int main()  
+{  
+    int n,m,i,j,k;  
+    printf("Enter the number of rows");  
+    scanf("%d",&n);  
+    m=n;  
+   for(i=1;i<=n;i++)  
+   {  
+       for(j=1;j<=m-1;j++)  
+       {  
+           printf(" ");  
+       }  
+       for(k=1;k<=2*i-1;k++)  
+       {  
+         printf("*");  
+       }  
+       m--;  
+     
+      printf("\n");  
+    }   
+}  
+
+14.
+//Q-14 pattern 4
+
+#include <stdio.h>  
+  
+int main()  
+{  
+    int n,m=1,i,j;  
+    printf("Enter the number of columns");  
+    scanf("%d",&n);  
+	for(i=1;i<=n;i++)  
+	{  
+  	for(j=1;j<=i;j++)  
+  	{  
+    	printf("*");  
+  	}  
+  printf("\n");  
+	}  
+ for(i=n-1;i>=1;i--)  
+ {  
+   for(j=1;j<=i;j++)  
+   {  
+     printf("*");  
+   }  
+   printf("\n");  
+ }    
+     
+    
+}  
+
+15.
+//Q-15 pattern 5
+
+#include <stdio.h>
+int main() {
+   int rows, i, j, number = 1;
+   printf("Enter the number of rows: ");
+   scanf("%d", &rows);
+   for (i = 1; i <= rows; i++) {
+      for (j = 1; j <= i; ++j) {
+         printf("%d ", number);
+         ++number;
+      }
+      printf("\n");
+   }
+}
+
+16.
+//Q-16 
+
+
+#include <stdio.h>
+
+int largest(int arr[], int n)
+{
+	int i;
+
+	
+	int max = arr[0];
+
+
+	for (i = 1; i < n; i++)
+		if (arr[i] > max)
+			max = arr[i];
+
+	return max;
+}
+
+
+int main()
+{
+	int arr[] = { 10, 324, 45, 90, 9808 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+
+	
+	printf("Largest in given array is %d", largest(arr, n));
+	return 0;
+}
+
+17.
+//Q-17
+
+#include <stdio.h>
+
+main() {
+    int num1, num2, choice;
+    int result;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Enter your choice: \n1 for addition\n2 for subtraction\n3 for multiplication\n4 for division\n");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            result = num1 + num2;
+            printf("Addition: %d\n", result);
+            break;
+        case 2:
+            result = num1 - num2;
+            printf("Subtraction: %d\n", result);
+            break;
+        case 3:
+            result = num1 * num2;
+            printf("Multiplication: %d\n", result);
+            break;
+        case 4:
+            result = (float)num1 / num2;
+            printf("Division: %d\n", result);
+            break;
+        default:
+            printf("Invalid choice!\n");
+    }
+}
+18.
+//Q-18
+
+
+# include <stdio.h>
+
+
+void reverse(char *str)
+{
+if (*str)
+{
+	reverse(str + 1);
+	printf("%c", *str);
+}
+}
+
+
+int main()
+{
+char a[] = "hello my name is dev";
+reverse(a);
+return 0;
+}
+
+
+19.
+
+//Q-19
+
+#include<stdio.h>
+int factorial(int f)
+{
+	if(f>1)
+	{
+		return f*factorial(f-1);
+	}
+	
+}
+main()
+{
+	printf("%d",factorial(5));
+}
+
+20.
+//Q-20
+
+#include <stdio.h>              
+
+
+main()                        
+{
+	int a[100],n,i,j,tmp;
+	printf("Array size: ");
+        scanf("%d",&n);
+        printf("Elements: ");
+        
+      for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+	for (i = 0; i < n; i++)                    
+	{
+		for (j = 0; j < n; j++)             
+		{
+			if (a[j] > a[i])                
+			{
+				tmp = a[i];         
+				a[i] = a[j];           
+			
+				a[j] = tmp;             
+			}  
+		}
+	}
+	printf("\n\nAscending : ");                     
+	for (i = 0; i < n; i++)                    
+	{
+		printf(" %d ", a[i]);
+	}
+	for (i = 0; i < n; i++)                     
+	{
+		for (j = 0; j < n; j++)            
+		{
+			if (a[j] < a[i])                
+			{
+				tmp = a[i];         
+				a[i] = a[j];            
+				a[j] = tmp;             
+			}
+		}
+	}
+	printf("\n\nDescending : ");                    
+	for (i = 0; i < n; i++)                     
+	{
+		printf(" %d ", a[i]);                   
+	}
+}
+21..
+//Q-21 matrix
+
+#include<stdio.h>
+main()
+{
+	int a[2][3]={10,20,30,40,50,60};
+	int b[2][3]={1,2,3,4,5,6};
+	int c[2][3];
+	int row,col;
+	printf("---first matrix---\n");
+	for(row=0;row<2;row++)
+	{
+		for(col=0;col<3;col++)
+		{
+			printf(" %d ",a[row][col]);
+		}
+		printf("\n");
+	}
+	printf("---second matrix---\n");
+	for(row=0;row<2;row++)
+	{
+		for(col=0;col<3;col++)
+		{
+			printf(" %d ",b[row][col]);
+		}
+		printf("\n");
+	}
+	printf(" ---Add matrix---\n");
+	for(row=0;row<2;row++)
+	{
+		for(col=0;col<3;col++)
+		{
+			c[row][col]=a[row][col]+b[row][col];
+			printf(" %d ",c[row][col]);
+		}
+		printf("\n");
+	}
+	printf(" ---Sub matrix---\n");
+	for(row=0;row<2;row++)
+	{
+		for(col=0;col<3;col++)
+		{
+			c[row][col]=a[row][col]-b[row][col];
+			printf(" %d ",c[row][col]);
+		}
+		printf("\n");
+	}
+	
+	printf(" ---Mul matrix---\n");
+	for(row=0;row<2;row++)
+	{
+		for(col=0;col<3;col++)
+		{
+			c[row][col]=a[row][col]*b[row][col];
+			printf(" %d ",c[row][col]);
+		}
+		printf("\n");
+	}
+	printf(" ---div matrix---\n");
+	for(row=0;row<2;row++)
+	{
+		for(col=0;col<3;col++)
+		{
+			c[row][col]=a[row][col]/b[row][col];
+			printf(" %d ",c[row][col]);
+		}
+		printf("\n");
+	}
+}
+
+22..
+//Q-22 len without inbuilt func
+#include<stdio.h>
+
+int main()
+{
+    
+    char str[100];
+    int i, length = 0;
+    
+    
+    printf("Enter the string\n");
+    scanf("%s",str);
+    
+   
+    for(i = 0; str[i] != '\0'; i++)
+    {
+    	length++;
+	}
+          
+    
+
+    printf("Length = %d\n",length);
+}
+
+23..
+//Q23 pallindrome
+
+//string is pallindrome or not
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char s[20];
+    int i, length;
+    int flag = 0;
+    
+    printf("Enter a string:");
+    scanf("%s", s);
+    
+    length = strlen(s);
+    
+    for(i=0;i < length ;i++){
+        if(s[i] != s[length-i-1]){
+            flag = 1;
+            break;
+           }
+        }
+    
+    if (flag) {
+        printf("%s is not a palindrome", s);
+    }    
+    else {
+        printf("%s is a palindrome", s);
+    }
+    return 0;
+}
+
+24..
+//Q24 structure
+
+
+#include<stdio.h>
+struct person
+{
+	int empno;
+	char empname[5];
+	char address[5];
+	int age;
+	
+		
+};
+main()
+{
+	struct person p;
+
+	printf("Enter your empno:");
+	scanf("%d",&p.empno);
+	printf("Enter your empname:");
+	scanf("%s",&p.empname);
+	printf("Enter your address:");
+	scanf("%s",&p.address);
+	printf("Enter your age:");
+	scanf("%d",&p.age);
+	printf("empno=%d",p.empno);
+	printf("\nempname=%s",p.empname);
+	printf("\naddress=%s",p.address);
+	printf("\nage=%d",p.age);
+}
